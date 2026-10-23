@@ -895,7 +895,40 @@ html {
 		// Inject the skip link.
 		sibling.parentElement.insertBefore( skipLink, sibling );
 	}() );
-	
+
+</script>
+<style id="tdp-back-to-top-css">
+.tdp-back-to-top{position:fixed;right:24px;bottom:24px;z-index:1000;width:48px;height:48px;display:flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:.33rem;background-color:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .25s ease,transform .25s ease,visibility .25s,background-color .2s ease}
+.tdp-back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
+.tdp-back-to-top:hover{background-color:var(--wp--preset--color--contrast-2,var(--wp--preset--color--contrast))}
+.tdp-back-to-top:focus-visible{outline:2px solid var(--wp--preset--color--contrast);outline-offset:3px}
+.tdp-back-to-top svg{width:22px;height:22px}
+@media (max-width:600px){.tdp-back-to-top{right:16px;bottom:16px;width:44px;height:44px}}
+</style>
+<button type="button" class="tdp-back-to-top" aria-label="Sayfanın başına dön" title="Başa dön">
+	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+<script id="tdp-back-to-top-js">
+	( function() {
+		var button = document.querySelector( '.tdp-back-to-top' );
+		if ( ! button ) {
+			return;
+		}
+		// Show the button once the visitor has scrolled down a bit.
+		var toggle = function() {
+			button.classList.toggle( 'is-visible', window.scrollY > 400 );
+		};
+		window.addEventListener( 'scroll', toggle, { passive: true } );
+		toggle();
+
+		button.addEventListener( 'click', function() {
+			window.scrollTo( { top: 0, behavior: 'smooth' } );
+			// Drop the #section hash so a refresh stays at the top.
+			if ( window.location.hash && window.history.replaceState ) {
+				window.history.replaceState( null, '', window.location.pathname + window.location.search );
+			}
+		} );
+	}() );
 </script>
 </body>
 </html>
