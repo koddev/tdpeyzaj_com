@@ -185,6 +185,19 @@ html {
 <link rel="icon" href="/wp-content/uploads/2025/11/cropped-td-peyzaj-logo-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="/wp-content/uploads/2025/11/cropped-td-peyzaj-logo-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2025/11/cropped-td-peyzaj-logo-270x270.png" />
+<style id="tdp-mobile-css">
+/* Google Maps embed has a fixed 600px width; keep it inside its column. */
+#iletisim iframe{display:block;width:100%;max-width:600px;height:320px}
+@media (max-width:781px){
+	/* Team: 2 cards per row instead of full-width stacked photos. */
+	.wp-container-core-columns-is-layout-4935966c{flex-wrap:wrap!important;gap:var(--wp--preset--spacing--30) var(--wp--preset--spacing--20)}
+	.wp-block-columns.wp-container-core-columns-is-layout-4935966c>.wp-block-column{flex-basis:calc(50% - var(--wp--preset--spacing--20) / 2)!important;flex-grow:0}
+	/* Contact: center the stacked footer columns. */
+	#iletisim .wp-block-column{text-align:center}
+	#iletisim .wp-block-group.is-vertical{align-items:center}
+	#iletisim iframe{margin:0 auto;height:260px}
+}
+</style>
 </head>
 
 <body class="home blog wp-custom-logo wp-embed-responsive wp-theme-twentytwentyfour">
