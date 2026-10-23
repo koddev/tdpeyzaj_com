@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tdpeyzaj.com/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tdpeyzaj.com/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <image:image><image:loc>https://tdpeyzaj.com/wp-content/uploads/2025/11/tdi-peyzaj-yayin-1-scaled.jpg</image:loc></image:image>
+  </url>
 </urlset>
