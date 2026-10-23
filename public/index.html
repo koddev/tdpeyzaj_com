@@ -257,6 +257,27 @@ a.tdp-plain-link:hover{text-decoration:underline}
 	#iletisim .wp-block-group.is-vertical{align-items:center}
 	#iletisim iframe{margin:0 auto;height:260px}
 }
+/* Phones: compact header with the three menu buttons always visible instead of the hamburger overlay. */
+@media (max-width:599px){
+	header.wp-block-template-part > .wp-block-group{padding-top:14px!important;padding-bottom:14px!important}
+	header .wp-container-core-group-is-layout-b585a4aa{flex-direction:column;align-items:stretch;gap:14px}
+	header .wp-container-core-group-is-layout-fbcf6490{flex-wrap:nowrap;align-items:center;gap:12px}
+	header .wp-block-site-logo img{width:56px!important;height:auto}
+	header .wp-block-site-title{font-size:1rem!important}
+	header .wp-container-core-group-is-layout-47e5a185 > p{margin-top:2px;font-size:.8125rem}
+	header .wp-container-core-group-is-layout-bc8e6f51,
+	header .wp-block-navigation{width:100%}
+	header .wp-block-navigation__responsive-container-open,
+	header .wp-block-navigation__responsive-container-close{display:none!important}
+	header .wp-block-navigation__responsive-container:not(.is-menu-open){display:block;position:static;width:100%;padding:0;background:transparent;z-index:auto}
+	header .wp-block-navigation__responsive-close,
+	header .wp-block-navigation__responsive-dialog{width:100%;max-width:none;margin:0;padding:0}
+	header .wp-block-navigation__responsive-container-content{display:flex!important;flex-direction:row!important;flex-wrap:nowrap;align-items:stretch;justify-content:space-between;gap:8px!important;width:100%;padding:0!important}
+	header .wp-block-navigation__responsive-container-content > .wp-block-buttons{flex:1 1 0;margin:0!important}
+	header .wp-block-navigation__responsive-container-content .wp-block-button{width:100%}
+	header .wp-block-navigation__responsive-container-content .wp-block-button__link{display:block;width:100%;padding:.55rem .25rem;font-size:.6875rem;letter-spacing:.04em;text-align:center;white-space:nowrap}
+	main > .wp-container-core-group-is-layout-490fa1db:first-child{padding-top:8px!important}
+}
 </style>
 </head>
 
